@@ -57,10 +57,10 @@ public class MainFrame extends javax.swing.JFrame {
         String text = doc.getText(0, doc.getLength());
         int pos = 0;
         for (String str : phrases) {
-            str=str.trim();
+            str = str.trim();
             while ((pos = text.indexOf(str, pos)) >= 0) {
                 hilite.addHighlight(pos, pos + str.length(), myHighlightPainter);
-                pos += str.length();  
+                pos += str.length();
             }
             pos = 0;
         }
@@ -154,9 +154,9 @@ public class MainFrame extends javax.swing.JFrame {
                     for (String str : result) {
                         // System.out.println(str);
                         if (jTextArea1.getText().equals("") || jTextArea1.getText() == null) {
-                            jTextArea1.setText(str);
+                            jTextArea1.setText(str + "\n");
                         } else {
-                            jTextArea1.setText(jTextArea1.getText() + "\n" + str);
+                            jTextArea1.setText(jTextArea1.getText() + "\n" + str + "\n");
                         }
                     }
                     highlight(jTextArea1, textFromField);
